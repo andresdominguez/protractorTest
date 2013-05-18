@@ -11,5 +11,9 @@
     "url": "https://github.com/andresdominguez/protractorTest.git"
   },
   "author": "Andres Dominguez",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "selenium-webdriver": "~2.32.1",
+    "protractor": "~0.1.2"
+  }
 }
