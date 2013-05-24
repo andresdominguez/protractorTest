@@ -8,7 +8,9 @@ app.configure(function() {
 });
 
 app.get('/message', function(req, res) {
-  res.send('This is the response.');
+  setTimeout(function() {
+    res.send('This is the response.');
+  }, 3000);
 });
 
 app.listen(3000);
