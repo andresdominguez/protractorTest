@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="SampleApp">
 <head>
   <title></title>
 </head>
-<body data-ng-app="SampleApp">
+<body>
 
-<div data-ng-controller="SampleCtrl">
-{{serverMessage}}
-</div>
+<div ng-view></div>
+
+
 
 <script src="../components/angular/angular.js"></script>
 <script src="app.js"></script>
