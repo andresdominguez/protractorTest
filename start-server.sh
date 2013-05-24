@@ -1,1 +1,0 @@
-java -jar lib/selenium-2.32.0/selenium-server-standalone-2.32.0.jar
