@@ -10,7 +10,7 @@ app.configure(function() {
 app.get('/message', function(req, res) {
   setTimeout(function() {
     res.send('This is the response.');
-  }, 3000);
+  }, 1000);
 });
 
 app.listen(3000);
