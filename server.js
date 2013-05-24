@@ -7,8 +7,8 @@ app.configure(function() {
   app.use(express.static(__dirname + '/'));
 });
 
-app.get('/yo', function(req, res) {
-  res.send('This is the response');
+app.get('/message', function(req, res) {
+  res.send('This is the response.');
 });
 
 app.listen(3000);
