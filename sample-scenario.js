@@ -1,7 +1,7 @@
 var webdriver = require('selenium-webdriver');
+var protractor = require('./protractor.js');
 var assert = require('assert');
 var util = require('util');
-var protractor = require('protractor');
 
 var driver = new webdriver.Builder().
     usingServer('http://localhost:4444/wd/hub').
