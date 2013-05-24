@@ -14,6 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "selenium-webdriver": "~2.32.1",
-    "protractor": "~0.1.2"
+    "protractor": "~0.1.2",
+    "express": "~3.2.5"
   }
 }
