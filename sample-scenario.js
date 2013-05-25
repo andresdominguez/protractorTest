@@ -19,13 +19,19 @@ driver.manage().timeouts().setScriptTimeout(10000);
 
 ptor.get('http://localhost:3000/testApp/');
 
-var message = ptor.findElement(protractor.By.binding('{{serverMessage}}'));
-message.getText().then(function(text) {
-  assert.equal('This is the response.', text);
-});
+var expectValue = function(binding, value) {
+  var message = ptor.findElement(protractor.By.binding(binding));
+  message.getText().then(function(text) {
+    assert.equal(value, text);
+  });
+};
+
+expectValue('{{serverMessage}}', 'This is the response.');
 
 var view = homeView.newView(ptor);
 view.setName('aaaa');
 view.setEmail('my@email.com');
 view.save();
-driver.quit();
+expectValue('{{serverMessage}}', 'This is the response.');
+
+//driver.quit();
