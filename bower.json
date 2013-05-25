@@ -2,7 +2,6 @@
   "name": "protractorTest",
   "version": "0.0.0",
   "devDependencies": {
-    "angular": "~1.0.7",
-    "bootstrap": "~2.3.2"
+    "angular": "~1.0.7"
   }
 }
