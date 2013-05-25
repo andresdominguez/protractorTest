@@ -3,9 +3,30 @@
   <div>{{andres}}</div>
 </div>
 
-<div data-ng-show="message">
-  {{message}}
-</div>
+<form class="form-horizontal">
+  <legend>This is a form</legend>
 
-<button class="btn" data-ng-click="showMeMessage()">Show me message</button>
-<a href="#/other-view" class="btn btn-primary">Go to another page</a>
+  <div data-ng-show="saveMessage">
+    {{saveMessage}}
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Name:</label>
+
+    <div class="controls">
+      <input id="name" type="text" data-ng-model="data.name">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">email:</label>
+
+    <div class="controls">
+      <input type="text" data-ng-model="data.email">
+    </div>
+  </div>
+  <button class="btn" data-ng-click="saveUser()">Save the thing</button>
+
+</form>
+
+<a href="#/other-view">Go to another page</a>
