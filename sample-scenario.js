@@ -2,6 +2,7 @@ var webdriver = require('selenium-webdriver');
 var protractor = require('./protractor.js');
 var assert = require('assert');
 var util = require('util');
+var homeView = require('./scenarios/home-scenario.js');
 
 var driver = new webdriver.Builder().
     usingServer('http://localhost:4444/wd/hub').
@@ -23,4 +24,8 @@ message.getText().then(function(text) {
   assert.equal('This is the response.', text);
 });
 
+var view = homeView.newView(ptor);
+view.setName('aaaa');
+view.setEmail('my@email.com');
+view.save();
 driver.quit();
