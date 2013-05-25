@@ -13,14 +13,15 @@ app.config(function($routeProvider) {
 });
 
 app.controller('SampleCtrl', function($scope, $http) {
+  $scope.user = {};
   $scope.andres = 'hey';
 
   $http({method: 'GET', url: '/message'}).success(function(data) {
     $scope.serverMessage = data;
   });
 
-  $scope.showMeMessage = function() {
-    $scope.message = 'Greetings';
+  $scope.saveUser = function() {
+    $scope.saveMessage = 'It has been saved';
   };
 });
 
