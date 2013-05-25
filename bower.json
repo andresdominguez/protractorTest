@@ -1,0 +1,7 @@
+{
+  "name": "protractorTest",
+  "version": "0.0.0",
+  "devDependencies": {
+    "angular": "~1.0.7"
+  }
+}
