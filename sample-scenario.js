@@ -32,6 +32,23 @@ var view = homeView.newView(ptor);
 view.setName('aaaa');
 view.setEmail('my@email.com');
 view.save();
-expectValue('{{serverMessage}}', 'This is the response.');
 
-//driver.quit();
+var waitUntilVisible = function(selector) {
+  return driver.wait(function() {
+    return ptor.findElement(selector).then(function(element) {
+      return element.isDisplayed();
+    })
+  }, 10000);
+};
+
+waitUntilVisible(protractor.By.binding('{{andres}}')).then(function() {
+  driver.findElement(protractor.By.id('nowVisible')).getText(function(value) {
+    assert.equal(value, 'foo')
+  });
+
+  ptor.findElement(protractor.By.binding('{{andres}}')).getText().then(function(value) {
+    assert.equal(value, 'hey')
+  });
+});
+
+driver.quit();
